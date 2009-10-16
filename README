@@ -1,6 +1,13 @@
-		 ====================================
-                       Package "Carp::Clan"
-		 ====================================
+                ============================
+                    Package "Carp::Clan"
+                ============================
+
+             Copyright (c) 2006-2009 by Joshua ben Jore
+             All rights reserved.
+
+             Copyright (c) 2001-2009 by Steffen Beyer
+             All rights reserved.
+
 
 Abstract:
 ---------
@@ -38,7 +45,7 @@ As usual:
 Changes over previous versions:
 -------------------------------
 
-Please refer to the file "CHANGES.txt" in this distribution for a more
+Please refer to the file "Changes" in this distribution for a more
 detailed version history log.
 
 
@@ -114,19 +121,13 @@ make several modules (more than one) work together and
 appear as though they were only one.
 
 
-Author's note:
---------------
+Contact Authors:
+----------------
 
-If you have any questions, suggestions or need any assistance, please
-let me know!
+Joshua ben Jore <jjore@cpan.org>
+http://perlmonks.org/?node=diotalevi
 
-Please do send feedback, this is essential for improving this module
-according to your needs!
+Steffen Beyer <stbey@cpan.org>
+http://www.engelschall.com/u/sb/download/
 
-I hope you will find this module useful. Enjoy!
 
-Yours,
---
-  Steffen Beyer <sb@engelschall.com> http://www.engelschall.com/u/sb/
-  "There is enough for the need of everyone in this world, but not
-   for the greed of everyone." - Mohandas Karamchand "Mahatma" Gandhi
