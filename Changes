@@ -12,6 +12,9 @@
 Version history:
 ----------------
 
+Version 6.02  17.10.2009
+ + Forgot to fix the bug of duplicated prefixes in _longmsg as well
+
 Version 6.01  16.10.2009
  + Fixed bug of duplicated prefixes (RT ticket #50560)
 

@@ -1,7 +1,7 @@
 
 ##
 ## Based on Carp.pm from Perl 5.005_03.
-## Last modified 16-Oct-2009 by Steffen Beyer.
+## Last modified 17-Oct-2009 by Steffen Beyer.
 ## Should be reasonably backwards compatible.
 ##
 ## This module is free software and can
@@ -28,7 +28,7 @@ $MaxArgNums = 8;     # How many arguments to print.        0 = all.
 
 $Verbose = 0;        # If true then make _shortmsg call _longmsg instead.
 
-$VERSION = '6.01';
+$VERSION = '6.02';
 
 # _longmsg() crawls all the way up the stack reporting on all the function
 # calls made. The error string, $error, is originally constructed from the
@@ -105,8 +105,12 @@ sub _longmsg {
             else              { $msg .= "\t$sub called"; }
         }
         else {
-            if   ( $sub =~ /::/ ) { $msg = "$sub(): $error"; }
-            else                  { $msg = "$sub: $error"; }
+            $msg = quotemeta($sub);
+            if ( $error =~ /\b$msg\b/ ) { $msg = $error; }
+            else {
+                if ( $sub =~ /::/ ) { $msg = "$sub(): $error"; }
+                else                { $msg = "$sub: $error"; }
+            }
         }
         $msg .= " at $file line $line\n" unless ( $error =~ /\n$/ );
         $error = '';
