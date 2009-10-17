@@ -12,6 +12,10 @@
 Version history:
 ----------------
 
+Version 6.03  18.10.2009
+ + Re-release to resolve confusion in CPAN caused by intermediate release
+   of Carp::Clan 5.4 (backport of bugfix #50560 below for Perls < v5.6.0)
+
 Version 6.02  17.10.2009
  + Forgot to fix the bug of duplicated prefixes in _longmsg as well
 

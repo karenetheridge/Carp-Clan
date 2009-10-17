@@ -35,7 +35,7 @@ print "1..55\n";
 
 my $n = 1;
 
-# If a person' environment predefined carp/croak/confess/cluck then I
+# If a person's environment predefined carp/croak/confess/cluck then I
 # need to know to ignore whether it was properly imported and just
 # trust that I have something that works.
 my %skip_import_tests;
@@ -86,8 +86,8 @@ for my $function (qw(croak confess carp cluck)) {
     ++$n;
 }
 
-# Create a heirarchy of packages to create a call stack. A( B( C( D(
-# E( F( carp/croak/cluck/confess ))))))
+# Create a hierarchy of packages to create a call stack:
+# A( B( C( D( E( F( carp/croak/cluck/confess ))))))
 package A;
 sub a { B::b(@_); }
 

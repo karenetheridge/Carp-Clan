@@ -23,6 +23,14 @@ occurs will be blamed on the "outsider" script or modules not belonging
 to this "clan".
 
 
+What's new in this release:
+---------------------------
+
+Version 6.03  18.10.2009
+ + Re-release to resolve confusion in CPAN caused by intermediate release
+   of Carp::Clan 5.4 (backport of bugfix #50560 below for Perls < v5.6.0)
+
+
 Prerequisites:
 --------------
 

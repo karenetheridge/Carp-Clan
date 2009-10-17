@@ -1,10 +1,10 @@
 --- #YAML:1.0
 name:                Carp-Clan
-version:             6.02
+version:             6.03
 abstract:            Report errors from perspective of caller of a "clan" of modules
 license:             ~
 author:              
-    - Joshua ben Jore <jjore@cpan.org>
+    - Steffen Beyer <STBEY@cpan.org>
 generated_by:        ExtUtils::MakeMaker version 6.42
 distribution_type:   module
 requires:     
