@@ -1,5 +1,5 @@
                      ====================================
-                       Package "Carp::Clan" Version 5.3
+                       Package "Carp::Clan" Version 5.4
                      ====================================
 
 
@@ -31,7 +31,7 @@ Legal issues:
 
 This package with all its parts is
 
-Copyright (c) 2001 - 2004 by Steffen Beyer.
+Copyright (c) 2001 - 2009 by Steffen Beyer.
 All rights reserved.
 
 This package is free software; you can use, modify and redistribute
@@ -153,6 +153,6 @@ I hope you will find this module useful. Enjoy!
 
 Yours,
 --
-  Steffen Beyer <sb@engelschall.com> http://www.engelschall.com/u/sb/
+  Steffen Beyer <STBEY@cpan.org> http://www.engelschall.com/u/sb/
   "There is enough for the need of everyone in this world, but not
    for the greed of everyone." - Mohandas Karamchand "Mahatma" Gandhi

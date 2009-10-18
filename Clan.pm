@@ -1,7 +1,7 @@
 
 ##
 ## Based on Carp.pm from Perl 5.005_03.
-## Last modified 12-Jun-2001 by Steffen Beyer.
+## Last modified 17-Oct-2009 by Steffen Beyer.
 ## Should be reasonably backwards compatible.
 ##
 ## This module is free software and can
@@ -27,7 +27,7 @@ $MaxArgNums =  8;   # How many arguments to print.        0 = all.
 
 $Verbose = 0;       # If true then make _shortmsg call _longmsg instead.
 
-$VERSION = '5.3';
+$VERSION = '5.4';
 
 # _longmsg() crawls all the way up the stack reporting on all the function
 # calls made. The error string, $error, is originally constructed from the
@@ -101,8 +101,13 @@ sub _longmsg
         }
         else
         {
-            if ($sub =~ /::/) { $msg = "$sub(): $error"; }
-            else              { $msg = "$sub: $error";   }
+            $msg = quotemeta($sub);
+            if ($error =~ /\b$msg\b/) { $msg = $error; }
+            else
+            {
+                if ($sub =~ /::/) { $msg = "$sub(): $error"; }
+                else              { $msg = "$sub: $error"; }
+            }
         }
         $msg .= " at $file line $line\n" unless ($error =~ /\n$/);
         $error = '';
@@ -131,10 +136,18 @@ sub _shortmsg
     while (($pack,$file,$line,$sub) = caller($i++))
     {
         next if ($pack eq 'Carp::Clan' or $pack =~ /$pattern/);
-        if    ($error eq '') { $msg = "$sub() called";  }
-        elsif ($sub =~ /::/) { $msg = "$sub(): $error"; }
-        else                 { $msg = "$sub: $error";   }
-        $msg .= " at $file line $line\n" unless ($error =~ /\n$/);
+        if ($error eq '') { $msg = "$sub() called"; }
+        else
+        {
+            $msg = quotemeta($sub);
+            if ($error =~ /\b$msg\b/) { $msg = $error; }
+            else
+            {
+                if ($sub =~ /::/) { $msg = "$sub(): $error"; }
+                else              { $msg = "$sub: $error"; }
+            }
+        }
+        $msg .= " at $file line $line\n" unless ( $error =~ /\n$/ );
         $msg =~ tr/\0//d; # Circumvent die's incorrect handling of NUL characters
         return $msg;
     }

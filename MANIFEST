@@ -8,3 +8,4 @@ MANIFEST
 README.txt
 t/00____version.t
 t/01_______carp.t
+META.yml                                 Module meta-data (added by MakeMaker)

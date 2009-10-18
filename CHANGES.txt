@@ -1,14 +1,18 @@
                      ====================================
-                       Package "Carp::Clan" Version 5.3
+                       Package "Carp::Clan" Version 5.4
                      ====================================
 
 
-                  Copyright (c) 2001 - 2004 by Steffen Beyer.
+                  Copyright (c) 2001 - 2009 by Steffen Beyer.
                              All rights reserved.
 
 
 Version history:
 ----------------
+
+Version 5.4   17.10.2009
+
+ +  Fixed bug of duplicated prefixes (RT ticket #50560)
 
 Version 5.3   30.04.2004
 
