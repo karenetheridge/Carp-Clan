@@ -1,5 +1,10 @@
 #!perl -w
 
+#BEGIN
+#{
+#    if ($] < 5.006) { print "1..0 # skip current Perl version $] < 5.006000\n"; exit 0; }
+#}
+
 use strict;
 
 my $USE_OBJECT_DEADLY = eval {
@@ -41,7 +46,7 @@ my $n = 1;
 my %skip_import_tests;
 {
     no strict 'refs';
-    @skip_import_tests{ grep { exists &{"main::$_"} }
+    @skip_import_tests{ grep { exists(${*{'main::'}}{$_}) and defined(&{${*{'main::'}}{$_}}) }
             qw( croak confess carp cluck ) } = ();
 }
 
@@ -58,7 +63,7 @@ for my $function (qw(croak confess carp cluck )) {
         print
             "ok $n # skip $function was already defined. Can't test import\n";
     }
-    elsif ( not exists &{"main::$function"} ) {
+    elsif ( not (exists(${*{'main::'}}{$function}) and defined(&{${*{'main::'}}{$function}})) ) {
         print "ok $n\n";
     }
     else {
@@ -802,7 +807,7 @@ if ($USE_OBJECT_DEADLY) {
     }
 }
 else {
-    print "ok $n # skip Object::Deadly not installed\n";
+    print "ok $n # skip Object::Deadly is not available on this platform\n";
 }
 $n++;
 

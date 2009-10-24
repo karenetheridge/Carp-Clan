@@ -1,13 +1,18 @@
 #!perl
-use Test::More;
 
-if ( not $ENV{AUTHOR_TESTS} ) {
-    plan skip_all => 'Skipping author tests';
+BEGIN
+{
+    unless ($ENV{AUTHOR_TESTS}) { print "1..0 # skip Skipping author tests\n"; exit 0; }
+    eval { require Test::More; Test::More->import(); };
+    if ($@) { print "1..0 # skip Test::More is not available on this platform\n"; exit 0; }
+    eval { require YAML; YAML->import('LoadFile'); };
+    if ($@) { print "1..0 # skip YAML is not available on this platform\n"; exit 0; }
 }
-else {
-    plan tests => 1;
-    require YAML;
-    YAML->import('LoadFile');
 
-    ok( LoadFile("META.yml") );
-}
+use strict;
+
+plan tests => 1;
+ok( LoadFile("META.yml") );
+
+__END__
+

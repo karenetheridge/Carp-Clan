@@ -1,7 +1,7 @@
 
 ##
 ## Based on Carp.pm from Perl 5.005_03.
-## Last modified 17-Oct-2009 by Steffen Beyer.
+## Last modified 24-Oct-2009 by Steffen Beyer.
 ## Should be reasonably backwards compatible.
 ##
 ## This module is free software and can
@@ -28,7 +28,7 @@ $MaxArgNums = 8;     # How many arguments to print.        0 = all.
 
 $Verbose = 0;        # If true then make _shortmsg call _longmsg instead.
 
-$VERSION = '6.03';
+$VERSION = '6.04';
 
 # _longmsg() crawls all the way up the stack reporting on all the function
 # calls made. The error string, $error, is originally constructed from the

@@ -26,9 +26,25 @@ to this "clan".
 What's new in this release:
 ---------------------------
 
-Version 6.03  18.10.2009
- + Re-release to resolve confusion in CPAN caused by intermediate release
-   of Carp::Clan 5.4 (backport of bugfix #50560 below for Perls < v5.6.0)
+Version 6.04  24.10.2009
+ + Solved RT ticket #50796 (inform type of license)
+ + Made the test suite compatible with Perl versions < v5.6.0
+
+
+Copyright & License:
+--------------------
+
+This package with all its parts is
+
+Copyright (c) 2006-2009 by Joshua ben Jore <jjore@cpan.org>
+Copyright (c) 2001-2009 by Steffen Beyer <stbey@cpan.org>
+
+All rights reserved.
+
+This package is free software; you can use, modify and redistribute
+it under the same terms as Perl itself, i.e., at your option, under
+the terms either of the "Artistic License" or the "GNU General Public
+License".
 
 
 Prerequisites:
@@ -55,21 +71,6 @@ Changes over previous versions:
 
 Please refer to the file "Changes" in this distribution for a more
 detailed version history log.
-
-
-Documentation:
---------------
-
-The documentation of this package is included in POD format (= "Plain
-Old Documentation") in the file with the extension ".pod" in this
-distribution, the human-readable markup-language standard for Perl
-documentation.
-
-By building this package, this documentation will automatically be
-converted into a man page, which will automatically be installed in
-your Perl tree for further reference through the installation process,
-where it can be accessed by the commands "man Carp::Clan" (Unix)
-and "perldoc Carp::Clan" (Unix and Win32 alike), for example.
 
 
 What does it do:
