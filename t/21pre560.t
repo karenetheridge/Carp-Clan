@@ -111,7 +111,7 @@ $n++;
 
 eval { &{*{$main::{'confess'}}}("CONFESSing"); };
 
-if ($@ =~ /\bCONFESSing at .+\n.*\b(?:eval {\.\.\.}|require 0) called at\b/)
+if ($@ =~ /\bCONFESSing at .+\n.*\b(?:eval \{\.\.\.\}|require 0) called at\b/)
 {print "ok $n\n";} else {print "not ok $n\n";}
 $n++;
 
@@ -123,7 +123,7 @@ $n++;
 
 eval { local $SIG{'__WARN__'} = sub { die $_[0]; }; &{*{$main::{'cluck'}}}("CLUCKing"); };
 
-if ($@ =~ /\bCLUCKing at .+\n.*\b(?:eval {\.\.\.}|require 0) called at\b/)
+if ($@ =~ /\bCLUCKing at .+\n.*\b(?:eval \{\.\.\.\}|require 0) called at\b/)
 {print "ok $n\n";} else {print "not ok $n\n";}
 $n++;
 
@@ -135,7 +135,7 @@ $n++;
 
 eval { Carp::Clan::confess("confessING"); };
 
-if ($@ =~ /\bconfessING at .+\n.*\b(?:eval {\.\.\.}|require 0) called at\b/)
+if ($@ =~ /\bconfessING at .+\n.*\b(?:eval \{\.\.\.\}|require 0) called at\b/)
 {print "ok $n\n";} else {print "not ok $n\n";}
 $n++;
 
@@ -147,7 +147,7 @@ $n++;
 
 eval { local $SIG{'__WARN__'} = sub { die $_[0]; }; Carp::Clan::cluck("cluckING"); };
 
-if ($@ =~ /\bcluckING at .+\n.*\b(?:eval {\.\.\.}|require 0) called at\b/)
+if ($@ =~ /\bcluckING at .+\n.*\b(?:eval \{\.\.\.\}|require 0) called at\b/)
 {print "ok $n\n";} else {print "not ok $n\n";}
 $n++;
 
@@ -170,7 +170,7 @@ if ($@ =~ /\bCoNfEsSiNg\ at\ .+\n
          .*\bC::c\(2,\ 'CoNfEsSiNg'\)\ called\ at\ .+\n
          .*\bB::b\(2,\ 'CoNfEsSiNg'\)\ called\ at\ .+\n
          .*\bA::a\(2,\ 'CoNfEsSiNg'\)\ called\ at\ .+\n
-         .*\b(?:eval\ {\.\.\.}|require\ 0)\ called\ at\ /x)
+         .*\b(?:eval\ \{\.\.\.\}|require\ 0)\ called\ at\ /x)
 {print "ok $n\n";} else {print "not ok $n\n";}
 $n++;
 
@@ -189,7 +189,7 @@ if ($@ =~ /\bClUcKiNg\ at\ .+\n
          .*\bC::c\(4,\ 'ClUcKiNg'\)\ called\ at\ .+\n
          .*\bB::b\(4,\ 'ClUcKiNg'\)\ called\ at\ .+\n
          .*\bA::a\(4,\ 'ClUcKiNg'\)\ called\ at\ .+\n
-         .*\b(?:eval\ {\.\.\.}|require\ 0)\ called\ at\ /x)
+         .*\b(?:eval\ \{\.\.\.\}|require\ 0)\ called\ at\ /x)
 {print "ok $n\n";} else {print "not ok $n\n";}
 $n++;
 
@@ -212,7 +212,7 @@ if ($@ =~ /\bCoNfEsSiNg\ at\ .+\n
          .*\bC::c\(2,\ 'CoNfEsSiNg'\)\ called\ at\ .+\n
          .*\bB::b\(2,\ 'CoNfEsSiNg'\)\ called\ at\ .+\n
          .*\bA::a\(2,\ 'CoNfEsSiNg'\)\ called\ at\ .+\n
-         .*\b(?:eval\ {\.\.\.}|require\ 0)\ called\ at\ /x)
+         .*\b(?:eval\ \{\.\.\.\}|require\ 0)\ called\ at\ /x)
 {print "ok $n\n";} else {print "not ok $n\n";}
 $n++;
 
@@ -231,7 +231,7 @@ if ($@ =~ /\bClUcKiNg\ at\ .+\n
          .*\bC::c\(4,\ 'ClUcKiNg'\)\ called\ at\ .+\n
          .*\bB::b\(4,\ 'ClUcKiNg'\)\ called\ at\ .+\n
          .*\bA::a\(4,\ 'ClUcKiNg'\)\ called\ at\ .+\n
-         .*\b(?:eval\ {\.\.\.}|require\ 0)\ called\ at\ /x)
+         .*\b(?:eval\ \{\.\.\.\}|require\ 0)\ called\ at\ /x)
 {print "ok $n\n";} else {print "not ok $n\n";}
 $n++;
 
@@ -254,7 +254,7 @@ if ($@ =~ /\bCoNfEsSiNg\ at\ .+\n
          .*\bC::c\(2,\ 'CoNfEsSiNg'\)\ called\ at\ .+\n
          .*\bB::b\(2,\ 'CoNfEsSiNg'\)\ called\ at\ .+\n
          .*\bA::a\(2,\ 'CoNfEsSiNg'\)\ called\ at\ .+\n
-         .*\b(?:eval\ {\.\.\.}|require\ 0)\ called\ at\ /x)
+         .*\b(?:eval\ \{\.\.\.\}|require\ 0)\ called\ at\ /x)
 {print "ok $n\n";} else {print "not ok $n\n";}
 $n++;
 
@@ -273,7 +273,7 @@ if ($@ =~ /\bClUcKiNg\ at\ .+\n
          .*\bC::c\(4,\ 'ClUcKiNg'\)\ called\ at\ .+\n
          .*\bB::b\(4,\ 'ClUcKiNg'\)\ called\ at\ .+\n
          .*\bA::a\(4,\ 'ClUcKiNg'\)\ called\ at\ .+\n
-         .*\b(?:eval\ {\.\.\.}|require\ 0)\ called\ at\ /x)
+         .*\b(?:eval\ \{\.\.\.\}|require\ 0)\ called\ at\ /x)
 {print "ok $n\n";} else {print "not ok $n\n";}
 $n++;
 
@@ -296,7 +296,7 @@ if ($@ =~ /\bCoNfEsSiNg\ at\ .+\n
          .*\bC::c\(2,\ 'CoNfEsSiNg'\)\ called\ at\ .+\n
          .*\bB::b\(2,\ 'CoNfEsSiNg'\)\ called\ at\ .+\n
          .*\bA::a\(2,\ 'CoNfEsSiNg'\)\ called\ at\ .+\n
-         .*\b(?:eval\ {\.\.\.}|require\ 0)\ called\ at\ /x)
+         .*\b(?:eval\ \{\.\.\.\}|require\ 0)\ called\ at\ /x)
 {print "ok $n\n";} else {print "not ok $n\n";}
 $n++;
 
@@ -315,7 +315,7 @@ if ($@ =~ /\bClUcKiNg\ at\ .+\n
          .*\bC::c\(4,\ 'ClUcKiNg'\)\ called\ at\ .+\n
          .*\bB::b\(4,\ 'ClUcKiNg'\)\ called\ at\ .+\n
          .*\bA::a\(4,\ 'ClUcKiNg'\)\ called\ at\ .+\n
-         .*\b(?:eval\ {\.\.\.}|require\ 0)\ called\ at\ /x)
+         .*\b(?:eval\ \{\.\.\.\}|require\ 0)\ called\ at\ /x)
 {print "ok $n\n";} else {print "not ok $n\n";}
 $n++;
 
@@ -338,7 +338,7 @@ if ($@ =~ /\bCoNfEsSiNg\ at\ .+\n
          .*\bC::c\(2,\ 'CoNfEsSiNg'\)\ called\ at\ .+\n
          .*\bB::b\(2,\ 'CoNfEsSiNg'\)\ called\ at\ .+\n
          .*\bA::a\(2,\ 'CoNfEsSiNg'\)\ called\ at\ .+\n
-         .*\b(?:eval\ {\.\.\.}|require\ 0)\ called\ at\ /x)
+         .*\b(?:eval\ \{\.\.\.\}|require\ 0)\ called\ at\ /x)
 {print "ok $n\n";} else {print "not ok $n\n";}
 $n++;
 
@@ -357,7 +357,7 @@ if ($@ =~ /\bClUcKiNg\ at\ .+\n
          .*\bC::c\(4,\ 'ClUcKiNg'\)\ called\ at\ .+\n
          .*\bB::b\(4,\ 'ClUcKiNg'\)\ called\ at\ .+\n
          .*\bA::a\(4,\ 'ClUcKiNg'\)\ called\ at\ .+\n
-         .*\b(?:eval\ {\.\.\.}|require\ 0)\ called\ at\ /x)
+         .*\b(?:eval\ \{\.\.\.\}|require\ 0)\ called\ at\ /x)
 {print "ok $n\n";} else {print "not ok $n\n";}
 $n++;
 
@@ -380,7 +380,7 @@ if ($@ =~ /\bCoNfEsSiNg\ at\ .+\n
          .*\bC::c\(2,\ 'CoNfEsSiNg'\)\ called\ at\ .+\n
          .*\bB::b\(2,\ 'CoNfEsSiNg'\)\ called\ at\ .+\n
          .*\bA::a\(2,\ 'CoNfEsSiNg'\)\ called\ at\ .+\n
-         .*\b(?:eval\ {\.\.\.}|require\ 0)\ called\ at\ /x)
+         .*\b(?:eval\ \{\.\.\.\}|require\ 0)\ called\ at\ /x)
 {print "ok $n\n";} else {print "not ok $n\n";}
 $n++;
 
@@ -399,7 +399,7 @@ if ($@ =~ /\bClUcKiNg\ at\ .+\n
          .*\bC::c\(4,\ 'ClUcKiNg'\)\ called\ at\ .+\n
          .*\bB::b\(4,\ 'ClUcKiNg'\)\ called\ at\ .+\n
          .*\bA::a\(4,\ 'ClUcKiNg'\)\ called\ at\ .+\n
-         .*\b(?:eval\ {\.\.\.}|require\ 0)\ called\ at\ /x)
+         .*\b(?:eval\ \{\.\.\.\}|require\ 0)\ called\ at\ /x)
 {print "ok $n\n";} else {print "not ok $n\n";}
 $n++;
 
@@ -422,7 +422,7 @@ if ($@ =~ /\bCoNfEsSiNg\ at\ .+\n
          .*\bC::c\(2,\ 'CoNfEsSiNg'\)\ called\ at\ .+\n
          .*\bB::b\(2,\ 'CoNfEsSiNg'\)\ called\ at\ .+\n
          .*\bA::a\(2,\ 'CoNfEsSiNg'\)\ called\ at\ .+\n
-         .*\b(?:eval\ {\.\.\.}|require\ 0)\ called\ at\ /x)
+         .*\b(?:eval\ \{\.\.\.\}|require\ 0)\ called\ at\ /x)
 {print "ok $n\n";} else {print "not ok $n\n";}
 $n++;
 
@@ -441,7 +441,7 @@ if ($@ =~ /\bClUcKiNg\ at\ .+\n
          .*\bC::c\(4,\ 'ClUcKiNg'\)\ called\ at\ .+\n
          .*\bB::b\(4,\ 'ClUcKiNg'\)\ called\ at\ .+\n
          .*\bA::a\(4,\ 'ClUcKiNg'\)\ called\ at\ .+\n
-         .*\b(?:eval\ {\.\.\.}|require\ 0)\ called\ at\ /x)
+         .*\b(?:eval\ \{\.\.\.\}|require\ 0)\ called\ at\ /x)
 {print "ok $n\n";} else {print "not ok $n\n";}
 $n++;
 
@@ -458,7 +458,7 @@ if ($@ =~ /\bCrOaKiNg\ at\ .+\n
          .*\bC::c\(1,\ 'CrOaKiNg'\)\ called\ at\ .+\n
          .*\bB::b\(1,\ 'CrOaKiNg'\)\ called\ at\ .+\n
          .*\bA::a\(1,\ 'CrOaKiNg'\)\ called\ at\ .+\n
-         .*\b(?:eval\ {\.\.\.}|require\ 0)\ called\ at\ /x)
+         .*\b(?:eval\ \{\.\.\.\}|require\ 0)\ called\ at\ /x)
 {print "ok $n\n";} else {print "not ok $n\n";}
 $n++;
 
@@ -471,7 +471,7 @@ if ($@ =~ /\bCoNfEsSiNg\ at\ .+\n
          .*\bC::c\(2,\ 'CoNfEsSiNg'\)\ called\ at\ .+\n
          .*\bB::b\(2,\ 'CoNfEsSiNg'\)\ called\ at\ .+\n
          .*\bA::a\(2,\ 'CoNfEsSiNg'\)\ called\ at\ .+\n
-         .*\b(?:eval\ {\.\.\.}|require\ 0)\ called\ at\ /x)
+         .*\b(?:eval\ \{\.\.\.\}|require\ 0)\ called\ at\ /x)
 {print "ok $n\n";} else {print "not ok $n\n";}
 $n++;
 
@@ -484,7 +484,7 @@ if ($@ =~ /\bCaRpInG\ at\ .+\n
          .*\bC::c\(3,\ 'CaRpInG'\)\ called\ at\ .+\n
          .*\bB::b\(3,\ 'CaRpInG'\)\ called\ at\ .+\n
          .*\bA::a\(3,\ 'CaRpInG'\)\ called\ at\ .+\n
-         .*\b(?:eval\ {\.\.\.}|require\ 0)\ called\ at\ /x)
+         .*\b(?:eval\ \{\.\.\.\}|require\ 0)\ called\ at\ /x)
 {print "ok $n\n";} else {print "not ok $n\n";}
 $n++;
 
@@ -497,7 +497,7 @@ if ($@ =~ /\bClUcKiNg\ at\ .+\n
          .*\bC::c\(4,\ 'ClUcKiNg'\)\ called\ at\ .+\n
          .*\bB::b\(4,\ 'ClUcKiNg'\)\ called\ at\ .+\n
          .*\bA::a\(4,\ 'ClUcKiNg'\)\ called\ at\ .+\n
-         .*\b(?:eval\ {\.\.\.}|require\ 0)\ called\ at\ /x)
+         .*\b(?:eval\ \{\.\.\.\}|require\ 0)\ called\ at\ /x)
 {print "ok $n\n";} else {print "not ok $n\n";}
 $n++;
 
@@ -514,7 +514,7 @@ if ($@ =~ /\bCrOaKiNg\ at\ .+\n
          .*\bC::c\(1,\ 'CrOaKiNg'\)\ called\ at\ .+\n
          .*\bB::b\(1,\ 'CrOaKiNg'\)\ called\ at\ .+\n
          .*\bA::a\(1,\ 'CrOaKiNg'\)\ called\ at\ .+\n
-         .*\b(?:eval\ {\.\.\.}|require\ 0)\ called\ at\ /x)
+         .*\b(?:eval\ \{\.\.\.\}|require\ 0)\ called\ at\ /x)
 {print "ok $n\n";} else {print "not ok $n\n";}
 $n++;
 
@@ -527,7 +527,7 @@ if ($@ =~ /\bCoNfEsSiNg\ at\ .+\n
          .*\bC::c\(2,\ 'CoNfEsSiNg'\)\ called\ at\ .+\n
          .*\bB::b\(2,\ 'CoNfEsSiNg'\)\ called\ at\ .+\n
          .*\bA::a\(2,\ 'CoNfEsSiNg'\)\ called\ at\ .+\n
-         .*\b(?:eval\ {\.\.\.}|require\ 0)\ called\ at\ /x)
+         .*\b(?:eval\ \{\.\.\.\}|require\ 0)\ called\ at\ /x)
 {print "ok $n\n";} else {print "not ok $n\n";}
 $n++;
 
@@ -540,7 +540,7 @@ if ($@ =~ /\bCaRpInG\ at\ .+\n
          .*\bC::c\(3,\ 'CaRpInG'\)\ called\ at\ .+\n
          .*\bB::b\(3,\ 'CaRpInG'\)\ called\ at\ .+\n
          .*\bA::a\(3,\ 'CaRpInG'\)\ called\ at\ .+\n
-         .*\b(?:eval\ {\.\.\.}|require\ 0)\ called\ at\ /x)
+         .*\b(?:eval\ \{\.\.\.\}|require\ 0)\ called\ at\ /x)
 {print "ok $n\n";} else {print "not ok $n\n";}
 $n++;
 
@@ -553,7 +553,7 @@ if ($@ =~ /\bClUcKiNg\ at\ .+\n
          .*\bC::c\(4,\ 'ClUcKiNg'\)\ called\ at\ .+\n
          .*\bB::b\(4,\ 'ClUcKiNg'\)\ called\ at\ .+\n
          .*\bA::a\(4,\ 'ClUcKiNg'\)\ called\ at\ .+\n
-         .*\b(?:eval\ {\.\.\.}|require\ 0)\ called\ at\ /x)
+         .*\b(?:eval\ \{\.\.\.\}|require\ 0)\ called\ at\ /x)
 {print "ok $n\n";} else {print "not ok $n\n";}
 $n++;
 
