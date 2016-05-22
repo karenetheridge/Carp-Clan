@@ -1,7 +1,7 @@
 
 ##
 ## Based on Carp.pm from Perl 5.005_03.
-## Last modified 24-Oct-2009 by Steffen Beyer.
+## Last modified 22-May-2016 by Kent Fredric.
 ## Should be reasonably backwards compatible.
 ##
 ## This module is free software and can
