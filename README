@@ -26,10 +26,9 @@ to this "clan".
 What's new in this release:
 ---------------------------
 
-Version 6.04  24.10.2009
- + Solved RT ticket #50796 (inform type of license)
- + Made the test suite compatible with Perl versions < v5.6.0
-
+Version 6.05  22.05.2016
+ + Patch tests failing due to 5.25.1+'s deprecated unquoted { } in regex.
+   (RT #114537)
 
 Copyright & License:
 --------------------
