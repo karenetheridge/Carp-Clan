@@ -2,12 +2,13 @@
                     Package "Carp::Clan"
                 ============================
 
-             Copyright (c) 2006-2009 by Joshua ben Jore
+             Copyright (c) 2006-2016 by Joshua ben Jore
              All rights reserved.
 
-             Copyright (c) 2001-2009 by Steffen Beyer
+             Copyright (c) 2001-2016 by Steffen Beyer
              All rights reserved.
 
+             Copyright (c) 2016-2016 by Kent Fredric
 
 Abstract:
 ---------
@@ -36,8 +37,9 @@ Copyright & License:
 
 This package with all its parts is
 
-Copyright (c) 2006-2009 by Joshua ben Jore <jjore@cpan.org>
-Copyright (c) 2001-2009 by Steffen Beyer <stbey@cpan.org>
+Copyright (c) 2006-2016 by Joshua ben Jore <jjore@cpan.org>
+Copyright (c) 2001-2016 by Steffen Beyer <stbey@cpan.org>
+Copyright (c) 2016-2016 by Kent Fredric <kentnl@cpan.org>
 
 All rights reserved.
 
@@ -139,4 +141,5 @@ http://perlmonks.org/?node=diotalevi
 Steffen Beyer <stbey@cpan.org>
 http://www.engelschall.com/u/sb/download/
 
-
+Kent Fredric <kentnl@cpan.org>
+https://github.com/kentnl/Carp-Clan
