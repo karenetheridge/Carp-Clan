@@ -17,12 +17,15 @@ my %make_conf = (
     test  => { TESTS => 't/*.t' }
 );
 
+my %meta_merge = ( 'meta-spec' => { 'version' => 2 }, );
+
 BEGIN {
     *author_mode = -f 'META.json' ? sub () { 0 } : sub () { 1 };
 }
 
 if (author_mode) {
     ExtUtils::MakeMaker->VERSION(6.63_03);
+    $make_conf{META_MERGE} = \%meta_merge;
 }
 else {
     # have to do this since old EUMM dev releases miss the eval $VERSION line
