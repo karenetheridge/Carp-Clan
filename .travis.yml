@@ -7,6 +7,7 @@ before_install:
   - build-perl
   - perl -V
   - build-dist;
+  - source ./maint/travis/coversmoke.sh
   - cd $BUILD_DIR;
 before_script:
   - coverage-setup

@@ -6,13 +6,14 @@ license/Artistic.txt
 license/GNU_GPL.txt
 maint/bump_changes.pl
 maint/set_version.pl
+maint/travis/coversmoke.sh
 Makefile.PL
 MANIFEST			This list of files
 MANIFEST.SKIP
 README
-t/01pod.t
-t/03yaml.t
 t/10basic.t
 t/11basic.t
 t/20pre560.t
 t/21pre560.t
+xt/author/01-pod.t
+xt/release/03-yaml.t

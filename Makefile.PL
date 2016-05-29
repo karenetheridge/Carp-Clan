@@ -17,6 +17,15 @@ my %make_conf = (
     test  => { TESTS => 't/*.t' }
 );
 
+my %author_test_requires = (
+    'Test::More' => '0.89',
+    'Test::Pod'  => '1.14',
+);
+my %release_test_requires = (
+    'Test::More' => '0.89',
+    'YAML'       => '0',
+);
+
 my %meta_merge = (
     'meta-spec' => { 'version' => 2 },
     'resources' => {
@@ -26,11 +35,35 @@ my %meta_merge = (
             'web'  => 'https://github.com/kentnl/Carp-Clan',
         },
     },
+    'prereqs' => {
+        'x_author_test'  => { 'requires' => {%author_test_requires} },
+        'x_release_test' => { 'requires' => {%author_test_requires} },
+    },
 );
 
 BEGIN {
     *author_mode = -f 'META.json' ? sub () { 0 } : sub () { 1 };
 }
+
+#NB: It is important PREREQ_PM is not changed in author mode
+#    or it will leak into META.* and turn up in the release.
+if ( $ENV{AUTOMATED_TESTING} or $ENV{AUTHOR_TESTING} ) {
+    warn "* Author Tests Enabled\n";
+    $make_conf{test}{TESTS} .= " xt/author/*.t";
+    _merge_requirements( $make_conf{TEST_REQUIRES}, \%author_test_requires )
+      unless author_mode;
+}
+
+if ( $ENV{AUTOMATED_TESTING} or $ENV{RELEASE_TESTING} ) {
+    warn "* Release Tests Enabled\n";
+    $make_conf{test}{TESTS} .= " xt/release/*.t";
+    _merge_requirements( $make_conf{TEST_REQUIRES}, \%release_test_requires )
+      unless author_mode;
+}
+
+#if ( $ENV{AUTOMATED_TESTING} ) {
+#    $make_conf{test}{TESTS} .= " xt/smoke/*.t";
+#}
 
 if (author_mode) {
     ExtUtils::MakeMaker->VERSION(6.63_03);
