@@ -17,7 +17,16 @@ my %make_conf = (
     test  => { TESTS => 't/*.t' }
 );
 
-my %meta_merge = ( 'meta-spec' => { 'version' => 2 }, );
+my %meta_merge = (
+    'meta-spec' => { 'version' => 2 },
+    'resources' => {
+        'repository' => {
+            'type' => 'git',
+            'url'  => 'https://github.com/kentnl/Carp-Clan',
+            'web'  => 'https://github.com/kentnl/Carp-Clan',
+        },
+    },
+);
 
 BEGIN {
     *author_mode = -f 'META.json' ? sub () { 0 } : sub () { 1 };
