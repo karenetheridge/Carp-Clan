@@ -3,6 +3,7 @@ lib/Carp/Clan.pm
 lib/Carp/Clan.pod
 license/Artistic.txt
 license/GNU_GPL.txt
+maint/set_version.pl
 Makefile.PL
 MANIFEST			This list of files
 MANIFEST.SKIP
