@@ -26,9 +26,10 @@ to this "clan".
 What's new in this release:
 ---------------------------
 
-Version 6.05  22.05.2016
- + Patch tests failing due to 5.25.1+'s deprecated unquoted { } in regex.
-   (RT #114537)
+Version 6.06  29.05.2016
+ + Avoid failure due to version self-check in 20pre560.t
+   This test seems like a footgun for release management reasons, but apprently
+   I wasn't quite as careful as I tried to be in keeping the last release minimal.
 
 Copyright & License:
 --------------------

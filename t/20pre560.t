@@ -31,7 +31,7 @@ unless ($@)
 {print "ok $n\n";} else {print "not ok $n\n";}
 $n++;
 
-if ($Carp::Clan::VERSION eq '6.04')
+if ($Carp::Clan::VERSION eq '6.06')
 {print "ok $n\n";} else {print "not ok $n\n";}
 $n++;
 
