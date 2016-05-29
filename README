@@ -26,7 +26,7 @@ to this "clan".
 What's new in this release:
 ---------------------------
 
-Version 6.06  29.05.2016
+Version 6.07  29.05.2016
  + Avoid failure due to version self-check in 20pre560.t
    This test seems like a footgun for release management reasons, but apprently
    I wasn't quite as careful as I tried to be in keeping the last release minimal.

@@ -66,5 +66,4 @@ system( 'perl-reversion', '-set', $version );
         print {$fh} $changes_content;
         close $fh;
     }
-
 }
