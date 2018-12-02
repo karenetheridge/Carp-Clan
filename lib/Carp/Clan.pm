@@ -14,7 +14,6 @@
 package Carp::Clan;
 
 use strict;
-use vars qw( $MaxEvalLen $MaxArgLen $MaxArgNums $Verbose $VERSION );
 use overload ();
 
 # Original comments by Andy Wardley <abw@kfs.org> 09-Apr-1998.
@@ -22,13 +21,13 @@ use overload ();
 # The $Max(EvalLen|(Arg(Len|Nums)) variables are used to specify how
 # the eval text and function arguments should be formatted when printed.
 
-$MaxEvalLen = 0;     # How much eval '...text...' to show. 0 = all.
-$MaxArgLen  = 64;    # How much of each argument to print. 0 = all.
-$MaxArgNums = 8;     # How many arguments to print.        0 = all.
+our $MaxEvalLen = 0;     # How much eval '...text...' to show. 0 = all.
+our $MaxArgLen  = 64;    # How much of each argument to print. 0 = all.
+our $MaxArgNums = 8;     # How many arguments to print.        0 = all.
 
-$Verbose = 0;        # If true then make _shortmsg call _longmsg instead.
+our $Verbose = 0;        # If true then make _shortmsg call _longmsg instead.
 
-$VERSION = '6.07';
+our $VERSION = '6.07';
 
 # _longmsg() crawls all the way up the stack reporting on all the function
 # calls made. The error string, $error, is originally constructed from the
