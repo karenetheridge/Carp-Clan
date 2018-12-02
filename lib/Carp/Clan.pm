@@ -46,7 +46,8 @@ sub _longmsg {
         do {
             {
 
-                package DB;
+                package # hide from PAUSE
+                    DB;
                 ( $pack, $file, $line, $sub, $hargs, undef, $eval, $require )
                     = caller( $i++ )
             }
