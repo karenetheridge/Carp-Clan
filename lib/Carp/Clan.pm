@@ -268,7 +268,7 @@ module "Pack::B" will appear to have originated in "tool.pl" where
 as the unmodified "C<Carp.pm>" would try to make you believe C<:-)>.
 
 This works similarly if "Pack::B" calls "Pack::C" where the
-exception is raised, etcetera.
+exception is raised, et cetera.
 
 In other words, this blames all errors in the "C<Pack::*>" modules
 on the user of these modules, i.e., on you. C<;-)>
