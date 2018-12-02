@@ -1,6 +1,6 @@
 Revision history for Carp-Clan
 
-{{$NEXT}}
+6.07      2018-12-02 21:44:55Z
  - declared test prerequisites in the proper phase (RT#125288)
  - modernized distribution tooling
 
