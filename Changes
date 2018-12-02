@@ -1,5 +1,9 @@
 Revision history for Carp-Clan
 
+{{$NEXT}}
+ - declared test prerequisites in the proper phase (RT#125288)
+ - modernized distribution tooling
+
 6.06      2016-05-29
  - Avoid failure due to version self-check in 20pre560.t
    This test seems like a footgun for release management reasons, but apprently
