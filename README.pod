@@ -8,7 +8,7 @@ Carp::Clan - Report errors from perspective of caller of a "clan" of modules
 
 =head1 VERSION
 
-version 6.07
+version 6.08
 
 =head1 SYNOPSIS
 
@@ -109,17 +109,17 @@ Steffen Beyer <STBEY@cpan.org>
 
 =head1 CONTRIBUTORS
 
-=for stopwords Joshua ben Jore Karen Etheridge Kent Fredric
+=for stopwords Karen Etheridge Joshua ben Jore Kent Fredric
 
 =over 4
 
 =item *
 
-Joshua ben Jore <jjore@cpan.org>
+Karen Etheridge <ether@cpan.org>
 
 =item *
 
-Karen Etheridge <ether@cpan.org>
+Joshua ben Jore <jjore@cpan.org>
 
 =item *
 
