@@ -1,11 +1,7 @@
 use strict;
 use warnings;
 
-BEGIN
-{
-    eval { require Test::More; Test::More->import(); };
-    if ($@) { print "1..0 # skip Test::More is not available on this platform\n"; exit 0; }
-}
+use Test::More;
 
 plan tests => 2;
 
