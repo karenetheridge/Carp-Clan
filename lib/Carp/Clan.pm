@@ -207,19 +207,14 @@ sub import {
         else                            { $pattern = $item; }
     }
 
-   # Speed up pattern matching in Perl versions >= 5.005:
-   # (Uses "eval ''" because qr// is a syntax error in previous Perl versions)
-    if ( $] >= 5.005 ) {
-        eval '$pattern = qr/$pattern/;';
-    }
-    else {
-        eval { $pkg =~ /$pattern/; };
-    }
+    eval { $pattern = qr/$pattern/ };
+
     if ($@) {
         $@ =~ s/\s+$//;
         $@ =~ s/\s+at\s.+$//;
         die _shortmsg( '^:::', 0, $@ );
     }
+
     {
         local ($^W) = 0;
         no strict "refs";
