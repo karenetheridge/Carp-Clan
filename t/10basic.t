@@ -13,13 +13,10 @@ plan tests => 2;
 use_ok( 'Carp::Clan', 'Use Carp::Clan' );
 
 eval {
-    sub {
-        Carp::Clan->import(qw(^Carp\\b));
-        return 1;
-    },
+    Carp::Clan->import(qw(^Carp\\b));
 };
 
-ok(!$@, 'No errors importing');
+is($@, '', 'No errors importing');
 
 __END__
 

@@ -1,6 +1,7 @@
 Revision history for Carp-Clan
 
 {{$NEXT}}
+ - fix warning in bad test (thanks, Todd Rinaldo - RT#130494)
 
 6.07      2018-12-02 21:44:55Z
  - declared test prerequisites in the proper phase (RT#125288)
